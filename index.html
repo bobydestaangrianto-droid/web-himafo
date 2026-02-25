@@ -187,7 +187,7 @@
             text-align: center;
             color: var(--white);
             padding: 0 20px;
-            margin-top: 80px; /* Compensate for fixed nav */
+            margin-top: 80px;
         }
 
         .hero h1 {
@@ -268,6 +268,128 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        /* --- EIVO Creative Section --- */
+        .eivo-section {
+            background-color: var(--white);
+            position: relative;
+        }
+
+        .eivo-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .eivo-logo {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background: var(--light-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .eivo-logo:hover {
+            transform: translateY(-5px);
+        }
+
+        .eivo-logo a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .eivo-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: white;
+            padding: 20px;
+        }
+
+        .eivo-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .eivo-description {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--dark-text);
+            text-align: justify;
+        }
+
+        .eivo-social {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            background: var(--light-bg);
+            border-radius: 25px;
+            text-decoration: none;
+            color: var(--dark-text);
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .social-link:hover {
+            background: var(--primary-green);
+            color: white;
+            border-color: var(--primary-green);
+            transform: translateY(-3px);
+        }
+
+        .social-link i {
+            font-size: 1.1rem;
+        }
+
+        .social-link.instagram:hover { background: linear-gradient(45deg, #f09433, #d62976, #962fbf); }
+
+        .eivo-contact {
+            background: var(--light-bg);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid var(--primary-green);
+        }
+
+        .eivo-contact h4 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--primary-green);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .contact-item i {
+            width: 20px;
+            color: var(--primary-green);
+        }
+
+        .contact-item a {
+            text-decoration: none;
+            color: var(--dark-text);
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary-green);
         }
 
         /* --- Sewa Alat (Carousel) --- */
@@ -404,6 +526,28 @@
 
         .dot.active {
             background: var(--primary-green);
+        }
+
+        .rental-contact {
+            margin-top: 40px;
+            padding: 20px;
+            background: var(--white);
+            border-radius: 10px;
+            text-align: center;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .rental-contact h4 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--primary-green);
+        }
+
+        .rental-contact .contact-item {
+            justify-content: center;
         }
 
         /* --- Kontak Section --- */
@@ -556,18 +700,83 @@
         }
 
         .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
             margin-bottom: 30px;
+            flex-wrap: wrap;
         }
 
-        .social-icons a {
+        .social-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .social-icon {
             color: white;
             font-size: 1.5rem;
-            margin: 0 15px;
             transition: color 0.3s;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.1);
         }
 
-        .social-icons a:hover {
+        .social-icon:hover {
             color: var(--accent-yellow);
+            background: rgba(255,255,255,0.2);
+        }
+
+        .ig-dropdown {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            padding: 10px 0;
+            min-width: 200px;
+            display: none;
+            z-index: 100;
+        }
+
+        .social-wrapper:hover .ig-dropdown {
+            display: block;
+        }
+
+        .ig-dropdown a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            color: var(--dark-text);
+            text-decoration: none;
+            transition: all 0.3s;
+            border-bottom: 1px solid #eee;
+        }
+
+        .ig-dropdown a:last-child {
+            border-bottom: none;
+        }
+
+        .ig-dropdown a:hover {
+            background: linear-gradient(45deg, #f09433, #d62976, #962fbf);
+            color: white;
+        }
+
+        .ig-dropdown a i {
+            font-size: 1.2rem;
+        }
+
+        .ig-dropdown a span {
+            font-size: 0.9rem;
         }
 
         .copyright {
@@ -582,6 +791,14 @@
         @media (max-width: 1024px) {
             .rental-card {
                 flex: 0 0 calc(50% - 15px);
+            }
+            .eivo-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .eivo-logo {
+                max-width: 300px;
+                margin: 0 auto;
             }
         }
 
@@ -614,6 +831,14 @@
             .hero {
                 margin-top: 80px;
             }
+            .eivo-social {
+                justify-content: center;
+            }
+            .ig-dropdown {
+                left: auto;
+                right: 0;
+                transform: none;
+            }
         }
     </style>
 </head>
@@ -636,6 +861,7 @@
         <ul class="nav-links" id="navLinks">
             <li><a href="#home">Beranda</a></li>
             <li><a href="#about">Tentang</a></li>
+            <li><a href="#eivo">EIVO Creative</a></li>
             <li><a href="#rental">Sewa Alat</a></li>
             <li><a href="#contact">Kontak</a></li>
         </ul>
@@ -643,8 +869,8 @@
 
     <section class="hero" id="home">
         <h1 data-aos="fade-down" data-aos-duration="1000">HIMAFO UM</h1>
-        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Excellence in Learning Innovation through Lens</p>
-        <a href="#about" class="btn" data-aos="zoom-in" data-aos-delay="600">Jelajahi Karya</a>
+        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Excellence in Learning Innovation</p>
+        <a href="#about" class="btn" data-aos="zoom-in" data-aos-delay="600">Yuk jelajahi</a>
     </section>
 
     <section id="about">
@@ -663,6 +889,39 @@
                     <li><i class="fas fa-check-circle" style="color: var(--primary-green);"></i> Pameran Foto Tahunan</li>
                     <li><i class="fas fa-check-circle" style="color: var(--primary-green);"></i> Hunting Besar</li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- EIVO Creative Section -->
+    <section id="eivo" class="eivo-section">
+        <div class="section-title" data-aos="fade-up">
+            <h2>EIVO Creative</h2>
+        </div>
+        
+        <div class="eivo-container">
+            <div class="eivo-logo" data-aos="fade-right">
+                <a href="https://www.instagram.com/studio489" target="_blank">
+                    <img src="Salinan HIMAFO.webp" alt="EIVO Creative Logo">
+                </a>
+            </div>
+            
+            <div class="eivo-content" data-aos="fade-left">
+                <p class="eivo-description">
+                    Himpunan Mahasiswa Penggemar Fotografi (HIMAFO) juga memiliki badan usaha yang bernama EIVO Creative, yang bergerak di bidang jasa fotografi dan dokumentasi. EIVO Creative menyediakan berbagai layanan profesional, antara lain foto wisuda, pas foto, foto kepengurusan, foto studio, layanan photobooth, kerja sama sponsor, serta foto dokumentasi untuk berbagai kegiatan dan acara. Melalui badan usaha ini, HIMAFO tidak hanya menjadi wadah pengembangan minat dan bakat anggota dalam bidang fotografi, tetapi juga menghadirkan layanan kreatif yang berkualitas bagi mahasiswa maupun masyarakat umum.
+                </p>
+                
+                <div class="eivo-social">
+                    <a href="https://www.instagram.com/studio489" target="_blank" class="social-link instagram"><i class="fab fa-instagram"></i> @studio489</a>
+                </div>
+                
+                <div class="eivo-contact">
+                    <h4>Kontak EIVO Creative</h4>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/6285117421717" target="_blank">+62 851-1742-1717</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -793,6 +1052,19 @@
             <!-- Dots akan di-generate oleh JavaScript -->
         </div>
         
+        <!-- Rental Contact -->
+        <div class="rental-contact" data-aos="fade-up">
+            <h4>Kontak Admin Persewaan Alat</h4>
+            <div class="contact-item">
+                <i class="fab fa-whatsapp"></i>
+                <a href="https://wa.me/6285655202453" target="_blank">+62 856-5520-2453</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-whatsapp"></i>
+                <a href="https://wa.me/6282331385369" target="_blank">+62 823-3138-5369</a>
+            </div>
+        </div>
+        
         <p style="text-align: center; margin-top: 40px; font-style: italic;">*Syarat dan ketentuan berlaku bagi mahasiswa UM dan umum.</p>
     </section>
 
@@ -808,34 +1080,34 @@
 
             <div class="contact-buttons">
                 <!-- WhatsApp Button -->
-                <a href="https://wa.me/6281339374696" 
+                <a href="https://wa.me/6285111414891" 
                    class="contact-btn whatsapp" 
                    target="_blank"
                    data-aos="fade-up" 
                    data-aos-delay="100">
                     <i class="fab fa-whatsapp"></i>
-                    <span class="btn-title">WhatsApp Admin</span>
-                    <span class="btn-desc">Klik untuk chat langsung dengan admin via WhatsApp</span>
+                    <span class="btn-title">WhatsApp Humas</span>
+                    <span class="btn-desc">085111414891</span>
                 </a>
 
                 <!-- Phone Call Button -->
-                <a href="tel:+6281234567890" 
+                <a href="tel:+6285111414891" 
                    class="contact-btn phone" 
                    data-aos="fade-up" 
                    data-aos-delay="200">
                     <i class="fas fa-phone-alt"></i>
-                    <span class="btn-title">Telepon Langsung</span>
-                    <span class="btn-desc">Hubungi admin HIMAFO untuk konsultasi cepat</span>
+                    <span class="btn-title">Telepon Humas</span>
+                    <span class="btn-desc">085111414891</span>
                 </a>
 
                 <!-- Email Button -->
-                <a href="mailto:himafo@um.ac.id?subject=Pertanyaan%20Sewa%20Alat%20HIMAFO&body=Halo%20Admin%20HIMAFO,%0A%0ASaya%20ingin%20menanyakan%20tentang..." 
+                <a href="mailto:himafo.ukm@um.ac.id?subject=Pertanyaan%20HIMAFO&body=Halo%20Admin%20HIMAFO,%0A%0ASaya%20ingin%20menanyakan..." 
                    class="contact-btn email" 
                    data-aos="fade-up" 
                    data-aos-delay="300">
                     <i class="fas fa-envelope"></i>
                     <span class="btn-title">Email Resmi</span>
-                    <span class="btn-desc">Kirim email ke tim HIMAFO untuk pertanyaan detail</span>
+                    <span class="btn-desc">himafo.ukm@um.ac.id</span>
                 </a>
             </div>
 
@@ -851,15 +1123,34 @@
 
     <footer>
         <div class="social-icons">
-            <a href="https://www.instagram.com/himafo.official"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="mailto:himafo@um.ac.id"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.tiktok.com/@himafoindonesia" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            <a href="https://youtube.com/@studio489" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <div class="social-wrapper">
+                <div class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="ig-dropdown">
+                    <a href="https://www.instagram.com/himafo.official" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        <span>@himafo.official</span>
+                    </a>
+                    <a href="https://www.instagram.com/studio489" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        <span>@studio489</span>
+                    </a>
+                    <a href="https://www.instagram.com/hmfvisual" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        <span>@hmfvisual</span>
+                    </a>
+                </div>
+            </div>
+            <a href="https://x.com/HIMAFO" target="_blank" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+            <a href="mailto:himafo.ukm@um.ac.id" class="social-icon"><i class="fas fa-envelope"></i></a>
         </div>
         <p>Gedung UKM, Universitas Negeri Malang</p>
         <p>Jl. Semarang No.5, Malang, Jawa Timur</p>
         <div class="copyright">
-            &copy; 2024 HIMAFO UM. Excellence in Learning Innovation.
+            &copy; 2026 HIMAFO UM. Excellence in Learning Innovation.
         </div>
     </footer>
 
