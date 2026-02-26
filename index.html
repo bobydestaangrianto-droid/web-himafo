@@ -403,6 +403,7 @@
             max-width: 1200px;
             margin: 0 auto;
             overflow: hidden;
+            padding: 0 40px;
         }
 
         .carousel-track {
@@ -420,6 +421,8 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: transform 0.3s;
             min-height: 450px;
+            display: flex;
+            flex-direction: column;
         }
 
         .rental-card:hover {
@@ -430,6 +433,7 @@
             height: 200px;
             width: 100%;
             overflow: hidden;
+            flex-shrink: 0;
         }
 
         .rental-img img {
@@ -446,6 +450,9 @@
         .rental-content {
             padding: 25px;
             text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .rental-icon {
@@ -463,6 +470,7 @@
             color: #666;
             font-size: 0.95rem;
             margin-bottom: 15px;
+            flex: 1;
         }
 
         .price-tag {
@@ -473,6 +481,7 @@
             border-radius: 20px;
             font-weight: 600;
             font-size: 0.9rem;
+            margin-top: auto;
         }
 
         .carousel-btn {
@@ -481,8 +490,8 @@
             transform: translateY(-50%);
             background: var(--white);
             border: none;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             cursor: pointer;
@@ -501,11 +510,11 @@
         }
 
         .carousel-btn.prev {
-            left: -25px;
+            left: 0;
         }
 
         .carousel-btn.next {
-            right: -25px;
+            right: 0;
         }
 
         .carousel-dots {
@@ -699,6 +708,13 @@
             text-align: center;
         }
 
+        .footer-title {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--accent-yellow);
+            font-weight: 600;
+        }
+
         .social-icons {
             display: flex;
             justify-content: center;
@@ -726,6 +742,7 @@
             align-items: center;
             justify-content: center;
             background: rgba(255,255,255,0.1);
+            text-decoration: none;
         }
 
         .social-icon:hover {
@@ -809,15 +826,15 @@
                 flex: 0 0 calc(100% - 10px);
             }
             .carousel-btn {
-                width: 40px;
-                height: 40px;
+                width: 35px;
+                height: 35px;
                 font-size: 1rem;
             }
             .carousel-btn.prev {
-                left: -20px;
+                left: 5px;
             }
             .carousel-btn.next {
-                right: -20px;
+                right: 5px;
             }
             .contact-buttons {
                 flex-direction: column;
@@ -911,15 +928,15 @@
                     Himpunan Mahasiswa Penggemar Fotografi (HIMAFO) juga memiliki badan usaha yang bernama EIVO Creative, yang bergerak di bidang jasa fotografi dan dokumentasi. EIVO Creative menyediakan berbagai layanan profesional, antara lain foto wisuda, pas foto, foto kepengurusan, foto studio, layanan photobooth, kerja sama sponsor, serta foto dokumentasi untuk berbagai kegiatan dan acara. Melalui badan usaha ini, HIMAFO tidak hanya menjadi wadah pengembangan minat dan bakat anggota dalam bidang fotografi, tetapi juga menghadirkan layanan kreatif yang berkualitas bagi mahasiswa maupun masyarakat umum.
                 </p>
                 
-                <div class="eivo-social">
-                    <a href="https://www.instagram.com/studio489" target="_blank" class="social-link instagram"><i class="fab fa-instagram"></i> @studio489</a>
-                </div>
-                
                 <div class="eivo-contact">
                     <h4>Kontak EIVO Creative</h4>
                     <div class="contact-item">
                         <i class="fab fa-whatsapp"></i>
                         <a href="https://wa.me/6285117421717" target="_blank">+62 851-1742-1717</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <a href="https://www.instagram.com/studio489" target="_blank">@studio489</a>
                     </div>
                 </div>
             </div>
@@ -940,22 +957,22 @@
                 <!-- Item 1 -->
                 <div class="rental-card">
                     <div class="rental-img">
-                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Kamera DSLR">
+                        <img src="canon 600d.webp" alt="Kamera DSLR">
                     </div>
                     <div class="rental-content">
                         <div class="rental-icon">
-                            <i class="fas fa-camera"></i>
+                            <i class="fa-solid fa-camera"></i>
                         </div>
                         <h3>Kamera DSLR/Mirrorless</h3>
                         <p>Canon EOS R6, Sony A7 III, Nikon D850. Lengkap dengan lensa standar dan memori card.</p>
-                        <div class="price-tag">Rp 150.000/hari</div>
+                        <div class="price-tag">Mulai dari Rp 150.000/hari</div>
                     </div>
                 </div>
 
                 <!-- Item 2 -->
                 <div class="rental-card">
                     <div class="rental-img">
-                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Lighting Set">
+                        <img src="Lighting.webp" alt="Lighting Set">
                     </div>
                     <div class="rental-content">
                         <div class="rental-icon">
@@ -970,13 +987,13 @@
                 <!-- Item 3 -->
                 <div class="rental-card">
                     <div class="rental-img">
-                        <img src="https://images.unsplash.com/photo-1524230572899-a752b3835840?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Stabilizer">
+                        <img src="IN0110A03701.webp" alt="Tripod">
                     </div>
                     <div class="rental-content">
                         <div class="rental-icon">
-                            <i class="fas fa-video"></i>
+                        <i class="fa-solid fa-file-video"></i>
                         </div>
-                        <h3>Stabilizer & Tripod</h3>
+                        <h3>Tripod</h3>
                         <p>DJI Ronin SC, Tripod Manfrotto, Monopod. Untuk video smooth dan foto stabil.</p>
                         <div class="price-tag">Rp 75.000/hari</div>
                     </div>
@@ -985,44 +1002,44 @@
                 <!-- Item 4 (Baru) -->
                 <div class="rental-card">
                     <div class="rental-img">
-                        <img src="https://images.unsplash.com/photo-1542042161784-26ab9e041e89?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Drone">
+                        <img src="GodoxTT600.webp" alt="Flash_External_Godox_TT685O_II">
                     </div>
                     <div class="rental-content">
                         <div class="rental-icon">
-                            <i class="fas fa-drone"></i>
+                            <i class="fa-solid fa-bolt-lightning"></i>
                         </div>
-                        <h3>Drone Cinematic</h3>
-                        <p>DJI Mavic Air 2 dengan 4K camera, 3 baterai, dan remote control.</p>
-                        <div class="price-tag">Rp 250.000/hari</div>
+                        <h3>Flash External Godox</h3>
+                        <p>Flash eksternal untuk kebutuhan pencahayaan tambahan saat pemotretan.</p>
+                        <div class="price-tag">Rp 50.000/hari</div>
                     </div>
                 </div>
 
                 <!-- Item 5 (Baru) -->
                 <div class="rental-card">
                     <div class="rental-img">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Audio Equipment">
+                        <img src="Frame_Foto.webp" alt="Frame_Foto">
                     </div>
                     <div class="rental-content">
                         <div class="rental-icon">
-                            <i class="fas fa-microphone"></i>
+                            <i class="fa-solid fa-images"></i>
                         </div>
-                        <h3>Audio Recording</h3>
-                        <p>Mic shotgun, lapel mic, recorder digital, dan boom pole untuk kualitas audio terbaik.</p>
-                        <div class="price-tag">Rp 80.000/hari</div>
+                        <h3>Frame Foto</h3>
+                        <p>Berbagai ukuran frame foto untuk display dan pameran.</p>
+                        <div class="price-tag">Rp 25.000/hari</div>
                     </div>
                 </div>
 
                 <!-- Item 6 (Baru) -->
                 <div class="rental-card">
                     <div class="rental-img">
-                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Lensa">
+                        <img src="Proyektor.webp" alt="Proyektor">
                     </div>
                     <div class="rental-content">
                         <div class="rental-icon">
-                            <i class="fas fa-camera-retro"></i>
+                            <i class="fa-solid fa-clone"></i>
                         </div>
-                        <h3>Lensa Premium</h3>
-                        <p>Lensa wide, tele, dan prime dari Canon, Sony, Nikon untuk berbagai kebutuhan.</p>
+                        <h3>Proyektor</h3>
+                        <p>Proyektor untuk presentasi dan viewing bersama.</p>
                         <div class="price-tag">Rp 100.000/hari</div>
                     </div>
                 </div>
@@ -1030,15 +1047,30 @@
                 <!-- Item 7 (Baru) -->
                 <div class="rental-card">
                     <div class="rental-img">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Green Screen">
+                        <img src="Kabel_Roll.webp" alt="Kabel_Roll">
                     </div>
                     <div class="rental-content">
                         <div class="rental-icon">
-                            <i class="fas fa-film"></i>
+                            <i class="fa-solid fa-plug"></i>
                         </div>
-                        <h3>Green Screen Set</h3>
-                        <p>Background green screen 3x6m, lighting khusus, dan stand untuk produksi video.</p>
-                        <div class="price-tag">Rp 120.000/hari</div>
+                        <h3>Kabel Roll</h3>
+                        <p>Kabel roll panjang untuk kebutuhan listrik di lokasi shooting.</p>
+                        <div class="price-tag">Rp 30.000/hari</div>
+                    </div>
+                </div>
+
+                <!-- Item 8 (Baru) -->
+                <div class="rental-card">
+                    <div class="rental-img">
+                        <img src="Kipas_Angin_MASPION.webp" alt="Kipas Angin">
+                    </div>
+                    <div class="rental-content">
+                        <div class="rental-icon">
+                            <i class="fa-solid fa-fan"></i>
+                        </div>
+                        <h3>Kipas Angin</h3>
+                        <p>Kipas angin portable untuk kenyamanan saat pemotretan indoor.</p>
+                        <div class="price-tag">Rp 25.000/hari</div>
                     </div>
                 </div>
             </div>
@@ -1122,9 +1154,10 @@
     </section>
 
     <footer>
+        <div class="footer-title">Follow sosial media kami</div>
         <div class="social-icons">
-            <a href="https://www.tiktok.com/@himafoindonesia" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
-            <a href="https://youtube.com/@studio489" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@himafoindonesia" target="_blank" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com/@studio489" target="_blank" class="social-icon"><i class="fa-brands fa-square-youtube"></i></a>
             <div class="social-wrapper">
                 <div class="social-icon">
                     <i class="fab fa-instagram"></i>
@@ -1144,7 +1177,8 @@
                     </a>
                 </div>
             </div>
-            <a href="https://x.com/HIMAFO" target="_blank" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://x.com/HIMAFO" target="_blank" class="social-icon"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="https://www.facebook.com/himafo?rdid=f3LsZh4Sbuzzj0ca&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AN5thMmU6#" target="_blank" class="social-icon"><i class="fa-brands fa-square-facebook"></i></a>
             <a href="mailto:himafo.ukm@um.ac.id" class="social-icon"><i class="fas fa-envelope"></i></a>
         </div>
         <p>Gedung UKM, Universitas Negeri Malang</p>
